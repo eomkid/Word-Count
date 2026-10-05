@@ -76,3 +76,17 @@ def main():
         if user_input in file_menu:
             selected_file = file_menu[user_input]
             print(f"\n Analyzing File: {selected_file['path'].name}...\n")
+
+            analyzer_bot = WordAnalyzer(str(selected_file['path']))
+            if analyzer_bot.process_file():
+                analyzer_bot.print_report()
+
+            input("\n Presss Enter to return to file selection.")
+        else:
+            print(
+                "Your choice is invalid. Please enter a positive whole number from 1-5.")
+            input("Presss Enter to return to file selection.")
+
+
+if __name__ == "__main__":
+    main()
