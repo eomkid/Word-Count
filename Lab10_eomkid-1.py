@@ -59,3 +59,12 @@ def main():
         "3": {"file": "Tarzan of the Apes", "path": Path("Tarzan.txt")},
         "4": {"file": "Treasure Island", "path": Path("treasure_island.txt")}
     }
+
+    while True:
+        print("\nWord Analyzer")
+        print("What file would you like to analyze today:")
+        for num, txt in file_menu.items():
+            print(f"{num}. {txt["file"]}")
+        print("5. Exit")
+
+        user_input = input("Please enter a number 1-5: ").strip()
