@@ -68,3 +68,11 @@ def main():
         print("5. Exit")
 
         user_input = input("Please enter a number 1-5: ").strip()
+
+        if user_input == "5":
+            print("Another time then, bye bye")
+            break
+
+        if user_input in file_menu:
+            selected_file = file_menu[user_input]
+            print(f"\n Analyzing File: {selected_file['path'].name}...\n")
