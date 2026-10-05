@@ -16,7 +16,7 @@ class WordAnalyzer:
         """Initizes the WordAnalyzer and provides it with a Path object to store filepath strings.
         Also constains a dictionary for storing word frequences"""
         self.__filepath = Path(filepath)
-        self.__frequencies = {}
+        self.__word_frequencies = {}
 
     def process_file(self):
         if not self.__filepath.exists():
