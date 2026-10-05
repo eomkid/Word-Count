@@ -24,3 +24,9 @@ class WordAnalyzer:
             return False
 
         translation_table = str.maketrans(", ", string.punctuation)
+
+        try:
+            with self.__filepath.open("r", encoding="utf-8") as file:
+                for lines in file:
+                    strip_line = lines.translate(translation_table).lower()
+                    words = strip_line.split()
