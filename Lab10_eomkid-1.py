@@ -30,3 +30,8 @@ class WordAnalyzer:
                 for lines in file:
                     strip_line = lines.translate(translation_table).lower()
                     words = strip_line.split()
+
+                    for word in words:
+                        self.__word_frequencies[word] = self.__word_frequencies.get(
+                            word, 0) + 1
+            return True
