@@ -20,5 +20,5 @@ class WordAnalyzer:
 
     def process_file(self):
         if not self.__filepath.exists():
-            print("FIXME")
+            print(f"The file {self.__filepath} doesn't exist")
             return False
