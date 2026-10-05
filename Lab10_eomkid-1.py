@@ -50,7 +50,7 @@ class WordAnalyzer:
         \nword :: frequency """
         sorted_words = sorted(self.__word_frequencies.keys())
         for words in sorted_words:
-            print(f"{words:<11}  ::  {self.__word_frequencies[words]}")
+            print(f"{words:<25}  ::  {self.__word_frequencies[words]}")
 
 
 def main():
