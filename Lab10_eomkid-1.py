@@ -27,7 +27,7 @@ class WordAnalyzer:
             print(f"Error: The file {self.__filepath} doesn't exist")
             return False
 
-        translation_table = str.maketrans(", ", string.punctuation)
+        translation_table = str.maketrans('', '', string.punctuation)
 
         try:
             with self.__filepath.open("r", encoding="utf-8") as file:
