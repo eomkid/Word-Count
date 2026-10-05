@@ -20,7 +20,7 @@ class WordAnalyzer:
 
     def process_file(self):
         if not self.__filepath.exists():
-            print(f"The file {self.__filepath} doesn't exist")
+            print(f"Error: The file {self.__filepath} doesn't exist")
             return False
 
         translation_table = str.maketrans(", ", string.punctuation)
@@ -35,3 +35,7 @@ class WordAnalyzer:
                         self.__word_frequencies[word] = self.__word_frequencies.get(
                             word, 0) + 1
             return True
+
+        except FileNotFoundError:
+            print(f"Error: The file {self.__filepath} couldn't be found.")
+            return False
