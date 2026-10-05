@@ -45,4 +45,8 @@ class WordAnalyzer:
             return False
 
     def print_report(self):
-        pass
+        """Prints the sorted word and their frequencies in the following format:
+        \nword :: frequency """
+        sorted_words = sorted(self.__word_frequencies.keys())
+        for words in sorted_words:
+            print(f"{words:<11}  ::  {self.__word_frequencies[words]}")
