@@ -19,6 +19,10 @@ class WordAnalyzer:
         self.__word_frequencies = {}
 
     def process_file(self):
+        """Reads the txt files, removes punctuations using a translation table.
+        Also tracks word frequency.
+        Additionally returns True if the process passes and False if there is some kind of error
+        while attempting to read or find the file. """
         if not self.__filepath.exists():
             print(f"Error: The file {self.__filepath} doesn't exist")
             return False
@@ -39,3 +43,6 @@ class WordAnalyzer:
         except FileNotFoundError:
             print(f"Error: The file {self.__filepath} couldn't be found.")
             return False
+
+    def print_report(self):
+        pass
