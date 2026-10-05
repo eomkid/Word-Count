@@ -17,3 +17,8 @@ class WordAnalyzer:
         Also constains a dictionary for storing word frequences"""
         self.__filepath = Path(filepath)
         self.__frequencies = {}
+
+    def process_file(self):
+        if not self.__filepath.exists():
+            print("FIXME")
+            return False
