@@ -22,3 +22,5 @@ class WordAnalyzer:
         if not self.__filepath.exists():
             print(f"The file {self.__filepath} doesn't exist")
             return False
+
+        translation_table = str.maketrans(", ", string.punctuation)
