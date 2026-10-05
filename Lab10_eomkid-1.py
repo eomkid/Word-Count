@@ -50,3 +50,12 @@ class WordAnalyzer:
         sorted_words = sorted(self.__word_frequencies.keys())
         for words in sorted_words:
             print(f"{words:<11}  ::  {self.__word_frequencies[words]}")
+
+
+def main():
+    file_menu = {
+        "1": {"file": "The Count of Monte Cristo", "path": Path("monte_cristo.txt")},
+        "2": {"file": "A Princess of Mars", "path": Path("princess_mars.txt")},
+        "3": {"file": "Tarzan of the Apes", "path": Path("Tarzan.txt")},
+        "4": {"file": "Treasure Island", "path": Path("treasure_island.txt")}
+    }
