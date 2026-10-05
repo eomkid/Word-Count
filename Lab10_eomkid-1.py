@@ -54,6 +54,7 @@ class WordAnalyzer:
 
 
 def main():
+    """Runs the main loop of the program"""
     file_menu = {
         "1": {"file": "The Count of Monte Cristo", "path": Path("monte_cristo.txt")},
         "2": {"file": "A Princess of Mars", "path": Path("princess_mars.txt")},
