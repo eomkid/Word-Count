@@ -27,7 +27,8 @@ class WordAnalyzer:
             print(f"Error: The file {self.__filepath} doesn't exist")
             return False
 
-        translation_table = str.maketrans('', '', string.punctuation)
+        additional_punctions = string.punctuation + "“”‘’"
+        translation_table = str.maketrans('', '', additional_punctions)
 
         try:
             with self.__filepath.open("r", encoding="utf-8") as file:
@@ -64,7 +65,7 @@ def main():
         print("\nWord Analyzer")
         print("What file would you like to analyze today:")
         for num, txt in file_menu.items():
-            print(f"{num}. {txt["file"]}")
+            print(f"{num}. {txt['file']}")
         print("5. Exit")
 
         user_input = input("Please enter a number 1-5: ").strip()
